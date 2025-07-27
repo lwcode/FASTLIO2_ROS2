@@ -19,6 +19,10 @@ livox_ros_driver2
 ```
 
 ## 详细说明
+### 0.PCL和Eigen
+PCL >= 1.8, Follow [PCL Installation](http://www.pointclouds.org/downloads/linux.html).
+Eigen >= 3.3.4, Follow [Eigen Installation](http://eigen.tuxfamily.org/index.php?title=Main_Page).
+
 ### 1.编译 LIVOX-SDK2
 ```shell
 git clone https://github.com/Livox-SDK/Livox-SDK2.git
@@ -59,6 +63,16 @@ mkdir build
 cd build
 cmake -DGTSAM_USE_SYSTEM_EIGEN=ON ..
 sudo make -j4 install
+```
+
+### 5.编译工程
+```shell
+mkdir -p ws_fastlio2/src
+git clone https://github.com/lwcode/FASTLIO2_ROS2.git ws_fastlio2/src/FASTLIO2_ROS2
+cd ws_fastlio2
+source /opt/ros/humble/setup.sh
+source ../ws_livox/install/setup.bash
+colcon build
 ```
 
 ## 实例数据集
