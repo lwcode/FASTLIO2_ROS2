@@ -21,6 +21,9 @@ livox_ros_driver2
 ## 详细说明
 ### 0.PCL和Eigen
 PCL >= 1.8, Follow [PCL Installation](http://www.pointclouds.org/downloads/linux.html).
+```shell
+sudo apt install libpcl-dev
+```
 Eigen >= 3.3.4, Follow [Eigen Installation](http://eigen.tuxfamily.org/index.php?title=Main_Page).
 
 ### 1.编译 LIVOX-SDK2
